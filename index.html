@@ -2,91 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-
-    <title>You are welcome</title>
-
-    <!-- Bootstrap core CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio of Vladislav Chesnokov" />
+    <meta name="author" content="Vladislav Chesnokov" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title id="page-title">Welcome to My Portfolio</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-  </head>
+</head>
 
   <body>
     <div id="page-wraper">
       <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4>Vladislav Chesnokov</h4>
-              <span>Software Developer</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-              <ul class="main-menu">
-                <li><a href="#section1">My stack</a></li>
-                <li><a href="#section2">Education</a></li>
-                <li><a href="#section3">Projects</a></li>
-                <li><a href="#section4">Contact Me</a></li>
-              </ul>
-            </nav>
-            <div class="social-network">
-              <ul class="soial-icons">
-
-                <li>
-				 <a href="https://www.linkedin.com/in/vladislav-chesnokov-023a69269/"
-                    ><i class="fa fa-linkedin"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p>I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it</p>
-            </div>
+      <div id="menu" class="menu">
+        <i class="fa fa-times" id="menu-close"></i>
+        <div class="container">
+          <div class="image">
+            <a href="#"><img src="assets/images/author-image.jpg" alt="Author Image" /></a>
+          </div>
+          <div class="author-content">
+            <h4>Vladislav Chesnokov</h4>
+            <span id="author-title">Software Developer</span>
+          </div>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-menu">
+              <li><a id="tech-stack-title" href="#section1">My Tech Stack</a></li>
+              <li><a id="education-title" href="#section2">Education</a></li>
+              <li><a id="projects-title" href="#section3">Projects</a></li>
+            </ul>
+          </nav>
+          <div class="language-switcher">
+            <button id="en-button" onclick="setLanguage('en')">English</button>
+            <button id="de-button" onclick="setLanguage('de')">Deutsch</button>
+        </div>
+        
+          <div class="social-network">
+            <ul class="social-icons">
+              <li>
+                <a href="https://www.linkedin.com/in/vladislav-chesnokov-023a69269/">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
+      <!-- My Stack Section -->
       <section class="section about-me" data-section="section1">
         <div class="container">
           <div class="section-heading">
-            <h2>My stack</h2>
+            <h2 id="tech-stack-title1">My Tech Stack</h2>
             <div class="line-dec"></div>
-            <span
-              >Here you can find all useful info about me</span
-            >
+            <span id="tech-stack-subtitle">Explore the tools and technologies I work with</span>
           </div>
-          <div class="left-image-post">
+          <div class="radar-chart-post">
             <div class="row">
               <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/left-image.jpg" alt="" />
+                <canvas id="radarChart" width="500" height="500"></canvas>
                 </div>
-              </div>
               <div class="col-md-6">
                 <div class="right-text">
                   <h4>Hard Skills</h4>
-                  <p>
-					Mostly, I'm interested in everything related to the Python language, starting with server systems and ending with various sections of artificial intelligence, additionally, as Backend Developer I have knowldeges of SQL and relational databases. Except Python, I have basic knowledges of C++, and some of my projects are written in Kotlin. I have a lot of experience working with DevOps technologies, such as virtualization (Docker, docker-compose),
-container orchestration (Kubernetes) and virtual machine administration (Linux, ansible playbook and nginx). CI/CD, such as Jenkins and TeamCity and, of course, Git. 
+                  <p id="tech-stack-text">
+                    My expertise lies in Python, from server-side systems to AI. As a backend developer, I am skilled in SQL and relational databases. In addition to Python, I have fundamental knowledge of C++ and have worked on projects using Kotlin. I am experienced with DevOps technologies, including Docker, Kubernetes, Linux, and Ansible. I also have a strong background in CI/CD pipelines (Jenkins, TeamCity), and Git.
                   </p>
                 </div>
               </div>
@@ -96,30 +77,27 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
             <div class="row">
               <div class="col-md-6">
                 <div class="left-text">
-                  <h4>Soft skills</h4>
-                  <p>
-					As soft skills, I can mention my ability to adapt to new changes and a passionate desire to learn something new. Practically I've worked with project managing tools like Jira, Atlassian and Trello. Also I described and built my own project using Gantt diagram.
+                  <h4>Soft Skills</h4>
+                  <p id='tech-stack-text2'>
+                    I am adaptable to change and always eager to learn. I have practical experience with project management tools like Jira, Atlassian, and Trello, and have used Gantt charts to plan my own projects. I excel in collaboration and communication, which are crucial in DevOps environments for effective teamwork. My problem-solving skills help me to tackle challenges creatively and efficiently. Additionally, I am detail-oriented and possess strong analytical abilities that enhance my Python development work, allowing me to write clean, maintainable code. I prioritize continuous improvement and embrace feedback to optimize processes and outcomes
                   </p>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/right-image.jpg" alt="" />
-                </div>
+                <canvas id="doughnutChart" width="400" height="400"></canvas>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Education Section -->
       <section class="section my-services" data-section="section2">
         <div class="container">
           <div class="section-heading">
-            <h2>My education and certificates</h2>
+            <h2 id="education-title1">Education & Certificates</h2>
             <div class="line-dec"></div>
-            <span
-              >Education is a very important part of my life.</span
-            >
+            <span id="education-subtitle">Education is a vital part of my journey</span>
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -127,9 +105,9 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <div class="first-service-icon service-icon"></div>
                 <h4>Ural Federal University</h4>
                 <p>
-					- Bachelor Computer Science<br>
-					- 2019-2023<br>
-					- Average GPA - 1.6<br>
+                  - BSc in Computer Science<br />
+                  - 2019–2023<br />
+                  - Average GPA: 1.6<br />
                 </p>
               </div>
             </div>
@@ -138,8 +116,9 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <div class="second-service-icon service-icon"></div>
                 <h4>Hof University of Applied Sciences</h4>
                 <p>
-					- Exchange student Computer Science<br>
-					- 2023 March - 2023 Jule
+                  - Exchange Student in Computer Science<br />
+                  - March 2023 – July 2023 <br />
+                  - Average GPA: 1.8 <br />
                 </p>
               </div>
             </div>
@@ -148,7 +127,7 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <div class="third-service-icon service-icon"></div>
                 <h4>AWS Certificate</h4>
                 <p>
-                  Cloud Certificate on AWS platform - <a href="https://www.credly.com/badges/f8fb1f9d-3129-45ca-94f1-f904ff8a1c02/public_url">link</a>
+                  Certified in AWS Cloud - <a href="https://www.credly.com/badges/f8fb1f9d-3129-45ca-94f1-f904ff8a1c02/public_url">View Certificate</a>
                 </p>
               </div>
             </div>
@@ -157,7 +136,7 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <div class="fourth-service-icon service-icon"></div>
                 <h4>Cisco Certificate</h4>
                 <p>
-					CCNA badge - Introduction to network - <a href="https://www.credly.com/badges/0dbeaeaf-70de-4436-8969-09b72edd3be1/public_url">link</a>
+                  CCNA Badge - Introduction to Networking - <a href="https://www.credly.com/badges/0dbeaeaf-70de-4436-8969-09b72edd3be1/public_url">View Badge</a>
                 </p>
               </div>
             </div>
@@ -165,14 +144,13 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
         </div>
       </section>
 
+      <!-- Projects Section -->
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
-            <h2>My Projects</h2>
+            <h2 id="projects-title2">Projects</h2>
             <div class="line-dec"></div>
-            <span
-              >Here is a list of some my commercial and personal projects</span
-            >
+            <span id="projects-info">Here are some of my commercial and personal projects</span>
           </div>
           <div class="row">
             <div class="isotope-wrapper">
@@ -184,12 +162,12 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                     checked=""
                     name="isotope-filter"
                   />
-                  <span>all</span></label
+                  <span>All</span></label
                 >
                 <label
                   ><input
                     type="radio"
-                    data-type="people"
+                    data-type="commercial"
                     name="isotope-filter"
                   />
                   <span>Commercial</span></label
@@ -197,7 +175,7 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <label
                   ><input
                     type="radio"
-                    data-type="nature"
+                    data-type="freelance"
                     name="isotope-filter"
                   />
                   <span>Freelance</span></label
@@ -205,43 +183,54 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
                 <label
                   ><input
                     type="radio"
-                    data-type="animals"
+                    data-type="personal"
                     name="isotope-filter"
                   />
-                  <span>Personal and study</span></label
+                  <span>Personal & Study</span></label
                 >
               </form>
               <div class="isotope-box">
-                <div class="isotope-item" data-type="people">
-                    <img
-                      src="assets/images/portfolio-01.jpg"
-                      alt="sq-sample26"
-                    />
-					<h1>ValueAI</h1>
-					<p>Product of <a href="https://www.wave-access.com/">Waveaccess Company</a> - <a href="https://value-ai.net/">ValueAI</a></p>
-					<p>Worked with:</p>
-					<p>- Python Web frameork</p>
-					<p>- High-loaded microservice architecture</p>
-					<p>- Agile and Scrum methodology</p>
-					<p>During the work:</p>
-					<p>- Implemented Kafka in project, improved the efficency and bandwith</p>
-					<p>- Developed new functional for project, object speech recognition</p>
+                <div class="isotope-item" data-type="commercial">
+                  <img src="assets/images/portfolio-01.jpg" alt="ValueAI" />
+                  <h1>ValueAI</h1>
+                  <p>
+                    Product of <a href="https://www.wave-access.com/">Waveaccess</a> - <a href="https://value-ai.net/">ValueAI</a>
+                  </p>
+                  <p>Technologies:</p>
+                  <p>- Python Web Framework</p>
+                  <p>- Microservice Architecture</p>
+                  <p>- Agile/Scrum</p>
+                  <p>Contributions:</p>
+                  <p>- Implemented Kafka for improved efficiency and bandwidth</p>
+                  <p>- Developed speech recognition functionality</p>
                 </div>
 
-                <div class="isotope-item" data-type="people">
-                    <img
-                      src="assets/images/portfolio-02.jpg"
-                      alt="sq-sample26"
-                    />
-					<h1>Yorn</h1>
-					<p>Customer from USA - <a href="https://clxhc.com/">CLX Health LLC</a>telemetry project - <a href="https://about.yorn.com/">Yorn</a></p>
-					<p>Got experience of:</p>
-					<p>- Working with deprecated code</p>
-					<p>- Unit and integrated tests</p>
-					<p>- Work with team</p>
-					<p>During the work:</p>
-					<p>- Implemented Celery plus RabbitMQ in project</p>
+                <div class="isotope-item" data-type="commercial">
+                  <img src="assets/images/portfolio-02.jpg" alt="Yorn" />
+                  <h1>Yorn</h1>
+                  <p>
+                    US-based client <a href="https://clxhc.com/">CLX Health LLC</a> - <a href="https://about.yorn.com/">Yorn</a>
+                  </p>
+                  <p>Technologies:</p>
+                  <p>- Legacy Codebase Management</p>
+                  <p>- Unit & Integration Testing</p>
+                  <p>Contributions:</p>
+                  <p>- Implemented Celery with RabbitMQ</p>
+                  <p>- Building of CI/CD pipelines and workaround</p>
+                  <p>- WebDev with Flask as a part of microservice architecture</p>
                 </div>
+
+                <div class="isotope-item" data-type="personal">
+                  <img src="assets/images/portfolio-03.jpg" alt="Yorn" />
+                  <h1>PQC Evaluation</h1>
+                  <p>
+                    Tool for eveluation of efficiency of PQC (Post Quantum) Algorithms - <a href="https://github.com/billbuchanan/pqc_signatures/tree/develop">github</a>
+                  </p>
+                  <p>Technologies:</p>
+                  <p>- Golang async script for grabbing metrics from compiled binaries</p>
+                  <p>- Prometheus + Grafana for local resource management</p>
+                </div>
+
 
               </div>
             </div>
@@ -249,93 +238,126 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
         </div>
       </section>
 
-      <section class="section contact-me" data-section="section4">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Contact Me</h2>
-            <div class="line-dec"></div>
-            <span
-              >Feel free to contact me. I am open to a new experience and relocate :)</span
-            >
-          </div>
-          <div class="row">
-            <div class="right-content">
-              <div class="container">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Your name..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Your email..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Subject..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Your message..."
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/custom.js"></script>
+    <!-- Radar chart conf -->
+    <script>
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      
+      const radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['OS', 'Programming', 'Networking', 'CyberSec', 'DevOps'],
+          datasets: [{
+            label: 'Skills',
+            data: [60, 80, 60, 70, 70], 
+            fill: true,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            borderColor: '#fff',
+            pointHoverBackgroundColor: "white",
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor:  'white',
+          }]
+        },
+        options: {
+          elements: {
+            line: {
+              borderWidth: 1
+            }
+          },
+          scales: {
+            r: {
+              grid: {
+            color: 'grey', 
+            lineWidth: 1, 
+          },
+            pointLabels: {
+            color: 'white', 
+            font: {
+              size: 16, 
+              weight: 'bold' 
+            }},
+              angleLines: {
+                display: true
+              },
+              ticks: {
+              display: false 
+               },
+               
+              suggestedMin: 0,
+              suggestedMax: 100
+            }
+          },
+      plugins: {
+        legend: {
+          labels: {
+            font: {
+              size: 16, 
+              weight: 'bold'
+            },
+            color: 'white'
+          }
+        }
+      }
+    }
+
+      });
+    </script>
+
+  <!-- Doughunt chart -->
+
+  <script>
+    const ctx1 = document.getElementById('doughnutChart').getContext('2d');
+    
+    const doughnutChart = new Chart(ctx1, {
+      type: 'doughnut',
+      data: {
+        labels: ['Flexibility', 'Teamwork', 'Time-Management', 'Problem Solving'],
+        datasets: [{
+          label: 'Soft Skills',
+          data: [100, 80, 80, 100,],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(255, 159, 64, 0.6)'
+          ],
+          hoverOffset: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              color: 'white', // Change legend text color
+              font: {
+                size: 16, // Change legend font size
+                weight: 'bold' // Optional: make legend font bold
+              }
+            }
+          },
+          tooltip: {
+            titleColor: 'white', // Change tooltip title color
+            bodyColor: 'white' // Change tooltip body color
+          }
+        }
+      }
+    });
+  </script>
+
     <script>
       //according to loftblog tut
       $(".main-menu li:first").addClass("active");
@@ -386,5 +408,64 @@ container orchestration (Kubernetes) and virtual machine administration (Linux, 
         checkSection();
       });
     </script>
+       <script>
+        const translations = {
+            en: {
+                title: "Welcome to My Portfolio",
+                authorTitle: "Software Developer",
+                techStackTitle: "My Tech Stack",
+                techStackSubtitle: "Explore the tools and technologies I work with",
+                techStackText: "My expertise lies in Python, from server-side systems to AI. As a backend developer, I am skilled in SQL and relational databases. In addition to Python, I have fundamental knowledge of C++ and have worked on projects using Kotlin. I am experienced with DevOps technologies, including Docker, Kubernetes, Linux, and Ansible. I also have a strong background in CI/CD pipelines (Jenkins, TeamCity), and Git.",
+                techStackText2: "I am adaptable to change and always eager to learn. I have practical experience with project management tools like Jira, Atlassian, and Trello, and have used Gantt charts to plan my own projects. I excel in collaboration and communication, which are crucial in DevOps environments for effective teamwork. My problem-solving skills help me to tackle challenges creatively and efficiently. Additionally, I am detail-oriented and possess strong analytical abilities that enhance my Python development work, allowing me to write clean, maintainable code. I prioritize continuous improvement and embrace feedback to optimize processes and outcomes",
+                educationTitle: "Education",
+                educationTitle1: "Education & Certificates",
+                educationSubtitle: "Education is a vital part of my journey",
+                projectsTitle: "Projects",
+                projectsInfo: "Here are some of my commercial and personal projects",
+                techStackDesc: "Explore the tools and technologies I work with",
+                hardSkillsDesc: "My expertise lies in Python, from server-side systems to AI...",
+                softSkillsDesc: "I am adaptable to change and always eager to learn..."
+            },
+            de: {
+                title: "Willkommen zu meinem Portfolio",
+                authorTitle: "Softwareentwickler",
+                techStackTitle: "Mein Technologiestack",
+                techStackSubtitle: "Hier sind die Tools und Technologien, mit denen ich Erfahrung habe",
+                techStackText: "Meine Expertise liegt in Python, von serverseitigen Systemen bis hin zu KI. Als Backend-Entwickler bin ich im Umgang mit SQL und relationalen Datenbanken erfahren. Neben Python habe ich grundlegende Kenntnisse in C++ und habe an Projekten mit Kotlin gearbeitet. Ich habe Erfahrung mit DevOps-Technologien, einschließlich Docker, Kubernetes, Linux und Ansible. Außerdem habe ich einen starken Hintergrund in CI/CD-Pipelines (Jenkins, TeamCity) und Git.",
+                techStackText2: "Ich bin anpassungsfähig und stets bereit zu lernen. Ich habe praktische Erfahrungen mit Projektmanagement-Tools wie Jira, Atlassian und Trello gesammelt und Gantt-Diagramme verwendet, um meine eigenen Projekte zu planen. Ich zeichne mich durch Zusammenarbeit und Kommunikation aus, die in DevOps-Umgebungen für effektives Teamwork entscheidend sind. Meine Problemlösungsfähigkeiten helfen mir, Herausforderungen kreativ und effizient anzugehen. Darüber hinaus bin ich detailorientiert und verfüge über starke analytische Fähigkeiten, die meine Arbeit als Python-Entwickler verbessern, indem ich sauberen und wartbaren Code schreibe. Ich lege Wert auf kontinuierliche Verbesserung und nehme Feedback an, um Prozesse und Ergebnisse zu optimieren.",
+                educationTitle: "die Bildung",
+                educationTitle1: "Abschluss und Zertifikate",
+                educationSubtitle: "Bildung ist ein wichtiger Teil meines Weges",
+                projectsTitle: "die Projekten",
+                projectsInfo: "Hier sind meine Projekten",
+                techStackDesc: "Entdecken Sie die Werkzeuge und Technologien, mit denen ich arbeite",
+                hardSkillsDesc: "Meine Expertise liegt in Python, von serverseitigen Systemen bis hin zu KI...",
+                softSkillsDesc: "Ich bin anpassungsfähig und immer lernwillig..."
+            }
+        };
+
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            document.getElementById('page-title').innerText = translation.title;
+            document.getElementById('author-title').innerText = translation.authorTitle;
+            document.getElementById('tech-stack-title').innerText = translation.techStackTitle;
+            document.getElementById('tech-stack-title1').innerText = translation.techStackTitle;
+            document.getElementById('tech-stack-subtitle').innerText = translation.techStackSubtitle;
+            document.getElementById('tech-stack-text').innerText = translation.techStackText;
+            document.getElementById('tech-stack-text2').innerText = translation.techStackText2;
+            document.getElementById('education-title').innerText = translation.educationTitle;
+            document.getElementById('education-title1').innerText = translation.educationTitle1;
+            document.getElementById('education-subtitle').innerText = translation.educationSubtitle;
+            document.getElementById('projects-title').innerText = translation.projectsTitle;
+            document.getElementById('projects-title2').innerText = translation.projectsTitle;
+            document.getElementById('projects-info').innerText = translation.projectsInfo;
+            document.getElementById('tech-stack-desc').innerText = translation.techStackDesc;
+            document.getElementById('hard-skills-desc').innerText = translation.hardSkillsDesc;
+            document.getElementById('soft-skills-desc').innerText = translation.softSkillsDesc;
+        }
+    </script>
+</body>
+</html>
+
   </body>
 </html>
